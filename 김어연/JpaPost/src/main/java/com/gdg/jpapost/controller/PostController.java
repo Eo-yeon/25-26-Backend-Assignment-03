@@ -30,7 +30,7 @@ public class PostController {
     }
 
     @PatchMapping("/{postId}")
-    public ResponseEntity<?> updateMusic(@PathVariable Long postId,
+    public ResponseEntity<PostInfoResponseDto> updatePost(@PathVariable Long postId,
                                          @RequestBody PostSaveRequestDto postSaveRequestDto) {
         return ResponseEntity.status(HttpStatus.OK).body(postService.updatePost(postId, postSaveRequestDto));
     }

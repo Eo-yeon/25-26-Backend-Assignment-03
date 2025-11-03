@@ -1,6 +1,5 @@
 package com.gdg.jpapost.controller;
 
-import com.gdg.jpapost.domain.User;
 import com.gdg.jpapost.dto.UserInfoResponseDto;
 import com.gdg.jpapost.dto.UserSaveRequestDto;
 import com.gdg.jpapost.service.UserService;
@@ -18,7 +17,7 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping
-    public ResponseEntity<?> saveUser(@RequestBody UserSaveRequestDto userSaveRequestDto) {
+    public ResponseEntity<UserInfoResponseDto> saveUser(@RequestBody UserSaveRequestDto userSaveRequestDto) {
         return ResponseEntity.status(HttpStatus.CREATED).body(userService.saveUser(userSaveRequestDto));
     }
 
