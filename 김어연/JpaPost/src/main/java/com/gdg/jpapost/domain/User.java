@@ -26,7 +26,7 @@ public class User {
     private List<Post> posts = new ArrayList<>();
 
     @Builder
-    public User(Long id, String name, String email) {
+    public User(String name, String email) {
         this.name = name;
         this.email = email;
     }
