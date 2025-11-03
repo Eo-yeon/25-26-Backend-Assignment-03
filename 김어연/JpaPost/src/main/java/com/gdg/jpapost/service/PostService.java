@@ -60,7 +60,7 @@ public class PostService {
     }
 
     @Transactional
-    public void delectePost(Long postId) {
+    public void deletePost(Long postId) {
         postRepository.deleteById(postId);
     }
 
